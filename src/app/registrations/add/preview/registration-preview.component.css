@@ -1,0 +1,10 @@
+.user-information-container-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.user-information-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 8px;
+}
