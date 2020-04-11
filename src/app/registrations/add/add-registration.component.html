@@ -1,1 +1,166 @@
-<p>add-registration works!</p>
+<section id="add-registration-container">
+
+  <!-- Card Container -->
+  <section class="card">
+
+    <!-- Card Title -->
+    <section class="card-header">
+      <h4 class="card-title">User Registration</h4>
+    </section>
+
+    <!-- Card Content -->
+    <section class="card-content">
+      <section class="px-3">
+
+        <!-- Registration Form -->
+        <form class="form form-horizontal">
+
+          <!-- Personal Information -->
+          <section class="form-body">
+            <h4 class="form-section"><i class="ft-user"></i> Personal Information</h4>
+
+            <!-- First Name -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="first-name">First Name: </label>
+              <section class="col-md-6">
+                <input type="text" id="first-name" class="form-control" name="fname"/>
+              </section>
+            </section>
+
+            <!-- Last Name -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="last-name">Last Name: </label>
+              <section class="col-md-6">
+                <input type="text" id="last-name" class="form-control" name="lname"/>
+              </section>
+            </section>
+
+            <!-- Gender -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control">Gender: </label>
+              <section class="col-md-6 input-group">
+                <section class="custom-control custom-radio d-inline-block">
+                  <input type="radio" id="male" name="customRadioInline2"
+                         class="custom-control-input">
+                  <label class="custom-control-label" for="male">Male</label>
+                </section>
+                <section class="custom-control custom-radio d-inline-block ml-1">
+                  <input type="radio" id="female" checked
+                         name="customRadioInline2" class="custom-control-input">
+                  <label class="custom-control-label" for="female">Female</label>
+                </section>
+              </section>
+            </section>
+
+            <!-- Date Of Birth -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="dob">Date Of Birth: </label>
+              <section class="col-md-6">
+                <input type="date" id="dob" class="form-control" name="dob"/>
+              </section>
+            </section>
+
+            <!-- Email ID -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="email-id">E-mail: </label>
+              <section class="col-md-6">
+                <input type="text" id="email-id" class="form-control" name="email"/>
+              </section>
+            </section>
+
+            <!-- Contact Number -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="contact-number">Contact Number: </label>
+              <section class="col-md-6">
+                <input type="number" id="contact-number" class="form-control" name="phone"/>
+              </section>
+            </section>
+
+            <!-- Address Line 1 -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="address-line-1">Address Line 1: </label>
+              <section class="col-md-6">
+                <input type="text" id="address-line-1" class="form-control" name="addressline1"/>
+              </section>
+            </section>
+
+            <!-- Address Line 2 -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="address-line-2">Address Line 2: </label>
+              <section class="col-md-6">
+                <input type="text" id="address-line-2" class="form-control" name="addressline2"/>
+              </section>
+            </section>
+
+            <!-- Town/ City -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="address-line-2">Town/ City: </label>
+              <section class="col-md-6">
+                <input type="text" id="town-city" class="form-control" name="towncity"/>
+              </section>
+            </section>
+
+            <!-- State -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="state">State: </label>
+              <section class="col-md-6">
+                <input type="text" id="state" class="form-control" name="state"/>
+              </section>
+            </section>
+
+            <!-- Pin Code -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="pin-code">Pin Code: </label>
+              <section class="col-md-6">
+                <input type="text" id="pin-code" class="form-control" name="pincode"/>
+              </section>
+            </section>
+
+            <!-- Test Information -->
+            <h4 class="form-section"><i class="ft-clipboard"></i> COVID-19 Tests </h4>
+
+            <!-- Test -->
+            <div class="form-group row">
+              <label class="col-md-3 label-control" for="test">Select Test: </label>
+              <div class="col-md-6">
+                <select id="test" name="test" class="form-control">
+                  <option value="none" selected="" disabled="">Select Test:</option>
+                  <option value="design">COVID-19 Test 1</option>
+                  <option value="development">COVID-19 Test 2</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Status -->
+            <div class="form-group row">
+              <label class="col-md-3 label-control" for="status">Select Status: </label>
+              <div class="col-md-6">
+                <select id="status" name="status" class="form-control">
+                  <option value="none" selected="" disabled="">Select Status:</option>
+                  <option value="design">In Progress (Waiting for Sample Collection)</option>
+                  <option value="development">In Progress (Waiting for Test Result)</option>
+                  <option value="development">Declined</option>
+                  <option value="development">Completed</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Comment -->
+            <div class="form-group row">
+              <label class="col-md-3 label-control" for="comment">Comment: </label>
+              <div class="col-md-6">
+                <textarea id="comment" rows="5" class="form-control" name="comment"></textarea>
+              </div>
+            </div>
+          </section>
+
+          <!-- Actions -->
+          <div class="form-actions center">
+            <button type="button" class="btn btn-raised btn-warning mr-1"><i class="ft-x"></i> Cancel</button>
+            <button type="button" class="btn btn-raised btn-primary"><i class="fa fa-check-square-o"></i> Save</button>
+          </div>
+        </form>
+      </section>
+    </section>
+  </section>
+</section>
