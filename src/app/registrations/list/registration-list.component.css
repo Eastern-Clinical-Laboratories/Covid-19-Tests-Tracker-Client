@@ -1,0 +1,26 @@
+#header-container {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.test-list-header {
+  margin-top: 12px;
+}
+
+.card-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.card-grid-item-details-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.card-grid-item {
+  border: #E0E0E0 1px solid;
+  padding: 12px;
+  border-radius: 5px;
+}

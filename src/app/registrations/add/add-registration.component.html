@@ -119,6 +119,11 @@
             <!-- Test Information -->
             <h4 class="form-section"><i class="ft-clipboard"></i> COVID-19 Tests </h4>
 
+            <section class="form-group row">
+              <label class="col-md-3 label-control">Test Category: </label>
+              <section class="col-md-6 text-muted"> Detection of 2019 Novel Corona Virus</section>
+            </section>
+
             <!-- Test -->
             <section class="form-group row">
               <label class="col-md-3 label-control" for="test">Select Test: </label>
@@ -126,7 +131,19 @@
                 <select id="test" name="test" class="form-control">
                   <option value="none" selected="" disabled="">Select Test:</option>
                   <option value="design">Real Time PCR</option>
-                  <option value="development">ELISA/option>
+                  <option value="development">ELISA</option>
+                </select>
+              </section>
+            </section>
+
+            <!-- Sample Type -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="sample-type">Select Sample Type: </label>
+              <section class="col-md-6">
+                <select id="sample-type" name="sample-type" class="form-control">
+                  <option value="none" selected="" disabled="">Select Sample Type:</option>
+                  <option value="development">Throat Swab</option>
+                  <option value="development">Blood</option>
                 </select>
               </section>
             </section>
@@ -145,7 +162,7 @@
               </section>
             </section>
 
-            <!-- Comment -->
+            <!-- Remarks -->
             <section class="form-group row">
               <label class="col-md-3 label-control" for="remarks">Remarks: </label>
               <section class="col-md-6">
@@ -157,7 +174,9 @@
           <!-- Actions -->
           <section class="form-actions center">
             <button type="button" class="btn btn-raised btn-warning mr-1"><i class="ft-x"></i> Cancel</button>
-            <button type="button" class="btn btn-raised btn-primary"><i class="fa fa-check-square-o"></i> Save</button>
+            <button type="button" class="btn btn-raised btn-primary" (click)="onSaveButtonClicked()"><i
+                class="fa fa-check-square-o"></i> Save
+            </button>
           </section>
         </form>
       </section>

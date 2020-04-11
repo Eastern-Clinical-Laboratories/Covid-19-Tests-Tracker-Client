@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AddRegistrationComponent } from './add/add-registration.component';
-import { RegistrationsListComponent } from './list/registrations-list.component';
+import { RegistrationListComponent } from './list/registration-list.component';
 import { RegistrationPreviewComponent } from './add/preview/registration-preview.component';
 
 const routes: Routes = [
@@ -14,12 +14,12 @@ const routes: Routes = [
         component: AddRegistrationComponent,
       },
       {
-        path: 'view-registrations',
-        component: RegistrationsListComponent,
-      },
-      {
         path: 'preview-registrations',
         component: RegistrationPreviewComponent,
+      },
+      {
+        path: 'list-registrations',
+        component: RegistrationListComponent,
       },
     ],
   },

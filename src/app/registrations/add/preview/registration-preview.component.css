@@ -6,5 +6,16 @@
 .user-information-grid {
   display: grid;
   grid-template-columns: auto 1fr;
+  grid-gap: 5px;
+}
+
+.test-information-container-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.test-information-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 8px;
 }
