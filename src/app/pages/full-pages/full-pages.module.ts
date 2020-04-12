@@ -38,6 +38,9 @@ import { KnowledgeBaseComponent } from './knowledge-base/knowledge-base.componen
     FaqComponent,
     KnowledgeBaseComponent,
   ],
+  exports: [
+    HorizontalTimelineComponent,
+  ],
 })
 export class FullPagesModule {
 }
