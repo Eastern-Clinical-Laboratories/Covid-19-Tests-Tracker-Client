@@ -1,8 +1,6 @@
 <section id="add-registration-container">
-
   <!-- Card Container -->
   <section class="card">
-
     <!-- Card Title -->
     <section class="card-header">
       <h4 class="card-title">User Registration</h4>
@@ -11,13 +9,35 @@
     <!-- Card Content -->
     <section class="card-content">
       <section class="px-3">
-
         <!-- Registration Form -->
         <form class="form form-horizontal">
-
           <!-- Personal Information -->
           <section class="form-body">
             <h4 class="form-section"><i class="ft-user"></i> Personal Information</h4>
+
+            <!-- MRN -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="mrn">MRN: </label>
+              <section class="col-md-6">
+                <input type="text" id="mrn" class="form-control" name="mrn"/>
+              </section>
+            </section>
+
+            <!-- Reference ID -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="first-name">Reference ID: </label>
+              <section class="col-md-6">
+                <input type="text" id="reference-id" class="form-control" name="reference-id"/>
+              </section>
+            </section>
+
+            <!-- National ID -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="first-name">National ID: </label>
+              <section class="col-md-6">
+                <input type="text" id="national-id" class="form-control" name="national-id"/>
+              </section>
+            </section>
 
             <!-- First Name -->
             <section class="form-group row">
@@ -40,14 +60,16 @@
               <label class="col-md-3 label-control">Gender: </label>
               <section class="col-md-6 input-group">
                 <section class="custom-control custom-radio d-inline-block">
-                  <input type="radio" id="male" name="customRadioInline2"
-                         class="custom-control-input">
+                  <input type="radio" id="male" name="customRadioInline2" class="custom-control-input" checked/>
                   <label class="custom-control-label" for="male">Male</label>
                 </section>
                 <section class="custom-control custom-radio d-inline-block ml-1">
-                  <input type="radio" id="female" checked
-                         name="customRadioInline2" class="custom-control-input">
+                  <input type="radio" id="female" name="customRadioInline2" class="custom-control-input"/>
                   <label class="custom-control-label" for="female">Female</label>
+                </section>
+                <section class="custom-control custom-radio d-inline-block ml-1">
+                  <input type="radio" id="others" name="customRadioInline2" class="custom-control-input"/>
+                  <label class="custom-control-label" for="others">Others</label>
                 </section>
               </section>
             </section>
@@ -68,11 +90,19 @@
               </section>
             </section>
 
-            <!-- Contact Number -->
+            <!-- Land line Number -->
             <section class="form-group row">
-              <label class="col-md-3 label-control" for="contact-number">Contact Number: </label>
+              <label class="col-md-3 label-control" for="landline-number">Landline Number: </label>
               <section class="col-md-6">
-                <input type="number" id="contact-number" class="form-control" name="phone"/>
+                <input type="number" id="landline-number" class="form-control" name="landline-number"/>
+              </section>
+            </section>
+
+            <!-- Mobile Number -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="mobile-number">Mobile Number: </label>
+              <section class="col-md-6">
+                <input type="number" id="mobile-number" class="form-control" name="mobile-number"/>
               </section>
             </section>
 
@@ -116,12 +146,77 @@
               </section>
             </section>
 
+            <!-- Miscellaneous Information -->
+            <h4 class="form-section"><i class="ft-info"></i> Miscellaneous Information </h4>
+
+
+            <!-- Gender -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control">History Of Foreign Travel: </label>
+              <section class="col-md-6 input-group">
+                <section class="custom-control custom-radio d-inline-block">
+                  <input type="radio" id="yes" name="customRadioInline2" class="custom-control-input" checked/>
+                  <label class="custom-control-label" for="yes">Yes</label>
+                </section>
+                <section class="custom-control custom-radio d-inline-block ml-1">
+                  <input type="radio" id="no" name="customRadioInline2" class="custom-control-input"/>
+                  <label class="custom-control-label" for="no">No</label>
+                </section>
+              </section>
+            </section>
+
+            <!-- Country -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="priority">Select Country: </label>
+              <section class="col-md-6">
+                <select id="miscellaneous_country" name="miscellaneous_country" class="form-control">
+                  <option value="none" selected>Select Country:</option>
+                  <option value="india">India</option>
+                  <option value="france">France</option>
+                </select>
+              </section>
+            </section>
+
+            <!-- Date Of Return -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="date-of-return">Date Of Return: </label>
+              <section class="col-md-6">
+                <input type="date" id="date-of-return" class="form-control" name="date-of-return"/>
+              </section>
+            </section>
+
             <!-- Test Information -->
             <h4 class="form-section"><i class="ft-clipboard"></i> COVID-19 Tests </h4>
 
+            <!-- Referral Type -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="priority">Select Referral: </label>
+              <section class="col-md-6">
+                <select id="referral" name="referral" class="form-control">
+                  <option value="none" disabled>Select Referral:</option>
+                  <option value="direct">Direct</option>
+                  <option value="ministry-of-health" selected>Ministry Of Health</option>
+                </select>
+              </section>
+            </section>
+
+            <!-- Test Category -->
             <section class="form-group row">
               <label class="col-md-3 label-control">Test Category: </label>
-              <section class="col-md-6 text-muted"> Detection of 2019 Novel Corona Virus</section>
+              <section class="col-md-6 text-muted">Detection of 2019 Novel Corona Virus</section>
+            </section>
+
+            <!-- Test Priority -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="priority">Select Test Priority: </label>
+              <section class="col-md-6">
+                <select id="priority" name="priority" class="form-control">
+                  <option value="none" disabled>Select Test Priority:</option>
+                  <option value="high">High</option>
+                  <option value="medium" selected>Medium</option>
+                  <option value="low">Low</option>
+                </select>
+              </section>
             </section>
 
             <!-- Test -->
@@ -153,11 +248,11 @@
               <label class="col-md-3 label-control" for="status">Select Status: </label>
               <section class="col-md-6">
                 <select id="status" name="status" class="form-control">
-                  <option value="none" selected="" disabled="">Select Status:</option>
+                  <option value="none" selected disabled>Select Status:</option>
                   <option value="design">In Progress (Waiting for Sample Collection)</option>
-                  <option value="development">In Progress (Waiting for Test Result)</option>
-                  <option value="development">Declined</option>
-                  <option value="development">Completed</option>
+                  <option value="development" disabled>In Progress (Waiting for Test Result)</option>
+                  <option value="development" disabled>Declined</option>
+                  <option value="development" disabled>Completed</option>
                 </select>
               </section>
             </section>
@@ -174,8 +269,8 @@
           <!-- Actions -->
           <section class="form-actions center">
             <button type="button" class="btn btn-raised btn-warning mr-1"><i class="ft-x"></i> Cancel</button>
-            <button type="button" class="btn btn-raised btn-primary" (click)="onSaveButtonClicked()"><i
-                class="fa fa-check-square-o"></i> Save
+            <button type="button" class="btn btn-raised btn-primary" (click)="onSaveButtonClicked()">
+              <i class="fa fa-check-square-o"></i> Save
             </button>
           </section>
         </form>

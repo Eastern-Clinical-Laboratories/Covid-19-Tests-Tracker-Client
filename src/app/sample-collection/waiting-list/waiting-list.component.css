@@ -1,6 +1,6 @@
 .details-container {
   display: grid;
-  grid-template-columns: auto 1fr auto 100px;
+  grid-template-columns: auto 1fr auto 125px;
   padding: 2rem;
 }
 
