@@ -1,0 +1,67 @@
+<section id="details-container">
+  <section class="card">
+    <section class="card-body">
+
+      <!-- User Information -->
+      <header>
+        <h5>User Information</h5>
+      </header>
+
+      <!-- User Information Container -->
+      <section id="user-information-container">
+        <!-- User Information -->
+        <section class="user-information-grid">
+          <section class="text-muted">Name:</section>
+          <section class="pl-3">Sahar Ali Zahreddine</section>
+
+          <section class="text-muted">ID:</section>
+          <section class="pl-3">3</section>
+
+          <section class="text-muted">Gender:</section>
+          <section class="pl-3">Male</section>
+
+          <section class="text-muted">Age:</section>
+          <section class="pl-3">33</section>
+
+          <section class="text-muted">Landline Number:</section>
+          <section class="pl-3">7708165767</section>
+
+          <section class="text-muted">Mobile Number:</section>
+          <section class="pl-3">7708165767</section>
+
+          <section class="text-muted">Medical Number:</section>
+          <section class="pl-3">SAZ1234</section>
+
+          <section class="text-muted">Referring Physician:</section>
+          <section class="pl-3">Ministry Of Health</section>
+
+          <section class="text-muted">Date:</section>
+          <section class="pl-3">14-04-2020</section>
+
+          <section class="text-muted">Status:</section>
+          <section class="pl-3">Waiting For Sample Collection</section>
+
+          <section class="text-muted">Remarks:</section>
+          <section class="pl-3">(N/A)</section>
+        </section>
+
+        <!-- Bar Code -->
+        <section class="d-flex justify-content-end">
+          <ngx-barcode6 [bc-format]="'CODE128'" [bc-value]="'12345678901231'" [bc-display-value]="true"></ngx-barcode6>
+        </section>
+      </section>
+
+      <br>
+
+      <!-- History -->
+      <header>
+        <h5> History </h5>
+      </header>
+
+      <section id="history">
+        <horizontal-timeline [timelineElements]="timeline" [showContent]="true"></horizontal-timeline>
+      </section>
+
+    </section>
+  </section>
+</section>

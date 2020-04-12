@@ -18,7 +18,7 @@ export class LoginPageComponent {
 
   // On submit button click
   onSubmit() {
-    this.loginForm.reset();
+    this.router.navigate(['registrations/list-registrations']);
   }
 
   // On Forgot password link click

@@ -10,6 +10,14 @@ export const Full_ROUTES: Routes = [
     loadChildren: () => import('../../sample-collection/sample-collection.module').then(m => m.SampleCollectionModule),
   },
   {
+    path: 'tests',
+    loadChildren: () => import('../../test/test.module').then(m => m.TestModule),
+  },
+  {
+    path: 'control-panel',
+    loadChildren: () => import('../../control-panel/control-panel.module').then(m => m.ControlPanelModule),
+  },
+  {
     path: 'dashboard',
     loadChildren: () => import('../../dashboard/dashboard.module').then(m => m.DashboardModule),
   },

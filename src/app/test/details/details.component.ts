@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+
 import { TimelineElement } from '../../pages/full-pages/timeline/horizontal/component/timeline-element';
 
 @Component({
-  selector: 'app-sample',
-  templateUrl: './sample.component.html',
-  styleUrls: ['./sample.component.css'],
+  selector: 'app-details',
+  templateUrl: './details.component.html',
+  styleUrls: ['./details.component.css'],
 })
-export class SampleComponent implements OnInit {
+export class DetailsComponent implements OnInit {
   public isRapidTest: boolean;
 
   public timeline: TimelineElement[] = [
@@ -30,5 +31,4 @@ export class SampleComponent implements OnInit {
   ngOnInit(): void {
     this._activatedRoute.queryParams.subscribe(params => this.isRapidTest = params['isRapidTest'] === 'true');
   }
-
 }

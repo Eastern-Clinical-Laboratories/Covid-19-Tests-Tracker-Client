@@ -9,10 +9,12 @@ import { AddRegistrationComponent } from './add/add-registration.component';
 import { RegistrationPreviewComponent } from './add/preview/registration-preview.component';
 import { RegistrationListComponent } from './list/registration-list.component';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { DetailsComponent } from './details/details.component';
+import { FullPagesModule } from '../pages/full-pages/full-pages.module';
 
 @NgModule({
-  declarations: [AddRegistrationComponent, RegistrationPreviewComponent, RegistrationListComponent],
-  imports: [CommonModule, RegistrationsRoutingModule, NgxBarcode6Module, NgxPrintModule, NgbDropdownModule],
+  declarations: [AddRegistrationComponent, RegistrationPreviewComponent, RegistrationListComponent, DetailsComponent],
+  imports: [CommonModule, RegistrationsRoutingModule, NgxBarcode6Module, NgxPrintModule, NgbDropdownModule, FullPagesModule],
 })
 export class RegistrationsModule {
 }

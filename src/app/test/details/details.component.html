@@ -1,0 +1,237 @@
+<section id="details-container">
+  <section class="card">
+    <section class="card-body">
+
+      <!-- User Information -->
+      <header>
+        <h5>User Information</h5>
+      </header>
+
+      <!-- User Information Container -->
+      <section id="user-information-container">
+        <!-- User Information -->
+        <section class="user-information-grid">
+          <section class="text-muted">Name:</section>
+          <section class="pl-3">Sahar Ali Zahreddine</section>
+
+          <section class="text-muted">ID:</section>
+          <section class="pl-3">3</section>
+
+          <section class="text-muted">Gender:</section>
+          <section class="pl-3">Male</section>
+
+          <section class="text-muted">Age:</section>
+          <section class="pl-3">33</section>
+
+          <section class="text-muted">Landline Number:</section>
+          <section class="pl-3">7708165767</section>
+
+          <section class="text-muted">Mobile Number:</section>
+          <section class="pl-3">7708165767</section>
+
+          <section class="text-muted">Medical Number:</section>
+          <section class="pl-3">SAZ1234</section>
+
+          <section class="text-muted">Referring Physician:</section>
+          <section class="pl-3">Ministry Of Health</section>
+
+          <section class="text-muted">Date:</section>
+          <section class="pl-3">14-04-2020</section>
+
+          <section class="text-muted">Status:</section>
+          <section class="pl-3">Waiting For Sample Collection</section>
+
+          <section class="text-muted">Remarks:</section>
+          <section class="pl-3">(N/A)</section>
+        </section>
+
+        <!-- Bar Code -->
+        <section class="d-flex justify-content-end">
+          <ngx-barcode6 [bc-format]="'CODE128'" [bc-value]="'12345678901231'" [bc-display-value]="true"></ngx-barcode6>
+        </section>
+      </section>
+
+      <br>
+
+      <!-- Test Details -->
+      <header>
+        <h5> Test Details </h5>
+      </header>
+
+      <br>
+      <section *ngIf="isRapidTest" id="rapid-testing">
+        <form class="form form-horizontal">
+
+          <!-- Test -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control">Test: </label>
+            <section class="col-md-6 text-muted">COVID 19 ANTIBODY RAPID SCREENING TEST</section>
+          </section>
+
+          <!-- Kit/ Instrument -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control">Kit/ Instrument: </label>
+            <section class="col-md-6 text-muted">Healgen</section>
+          </section>
+
+          <!-- Collection Date -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control">Collection Date: </label>
+            <section class="col-md-6 text-muted">14-April-2020</section>
+          </section>
+
+          <!-- Reporting Date -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control">Reporting Date: </label>
+            <section class="col-md-6 text-muted">20-April-2020</section>
+          </section>
+
+          <!-- Sample Type -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control">Sample Type: </label>
+            <section class="col-md-6 text-muted">Plasma</section>
+          </section>
+
+          <!-- Status -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control" for="interpretation-rapid">Select Interpretation: </label>
+            <section class="col-md-6">
+              <select id="interpretation-rapid" name="interpretation-rapid" class="form-control">
+                <option value="none" selected disabled>Select Interpretation:</option>
+                <option value="positive">Positive</option>
+                <option value="negative">Negative</option>
+              </select>
+            </section>
+          </section>
+
+          <!-- Status -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control" for="status-rapid">Select Status: </label>
+            <section class="col-md-6">
+              <select id="status-rapid" name="status-rapid" class="form-control">
+                <option value="none" selected disabled>Select Status:</option>
+                <option value="design">In Progress (Waiting for Sample Collection)</option>
+                <option value="development" disabled>In Progress (Waiting for Test Result)</option>
+                <option value="development" disabled>Declined</option>
+                <option value="development">Completed</option>
+              </select>
+            </section>
+          </section>
+
+          <!-- Comments -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control" for="comments-rapid">Comments: </label>
+            <section class="col-md-6">
+              <textarea id="comments-rapid" rows="5" class="form-control" name="comments-rapid"></textarea>
+            </section>
+          </section>
+
+          <!-- Remarks -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control" for="remarks-rapid">Remarks: </label>
+            <section class="col-md-6">
+              <textarea id="remarks-rapid" rows="5" class="form-control" name="remarks-rapid"></textarea>
+            </section>
+          </section>
+        </form>
+      </section>
+
+      <section *ngIf="!isRapidTest" id="pcr-testing">
+        <form class="form form-horizontal">
+
+          <!-- Test -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control">Test: </label>
+            <section class="col-md-6 text-muted">COVID 19 DETECTION BY PCR</section>
+          </section>
+
+          <!-- Kit/ Instrument -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control">Kit/ Instrument: </label>
+            <section class="col-md-6 text-muted">ESCO Spectrum</section>
+          </section>
+
+          <!-- Collection Date -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control">Collection Date: </label>
+            <section class="col-md-6 text-muted">14-April-2020</section>
+          </section>
+
+          <!-- Reporting Date -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control">Reporting Date: </label>
+            <section class="col-md-6 text-muted">20-April-2020</section>
+          </section>
+
+          <!-- Sample Type -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control">Sample Type: </label>
+            <section class="col-md-6 text-muted">Throat Swab</section>
+          </section>
+
+          <!-- Status -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control" for="interpretation-pcr">Select Interpretation: </label>
+            <section class="col-md-6">
+              <select id="interpretation-pcr" name="interpretation-pcr" class="form-control">
+                <option value="none" selected disabled>Select Interpretation:</option>
+                <option value="positive">Positive</option>
+                <option value="negative">Negative</option>
+              </select>
+            </section>
+          </section>
+
+          <!-- Status -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control" for="status-pcr">Select Status: </label>
+            <section class="col-md-6">
+              <select id="status-pcr" name="status-pcr" class="form-control">
+                <option value="none" selected disabled>Select Status:</option>
+                <option value="design">In Progress (Waiting for Sample Collection)</option>
+                <option value="development" disabled>In Progress (Waiting for Test Result)</option>
+                <option value="development" disabled>Declined</option>
+                <option value="development">Completed</option>
+              </select>
+            </section>
+          </section>
+
+          <!-- Comments -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control" for="comments-pcr">Comments: </label>
+            <section class="col-md-6">
+              <textarea id="comments-pcr" rows="5" class="form-control" name="comments-pcr"></textarea>
+            </section>
+          </section>
+
+          <!-- Remarks -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control" for="remarks-pcr">Remarks: </label>
+            <section class="col-md-6">
+              <textarea id="remarks-pcr" rows="5" class="form-control" name="remarks-pcr"></textarea>
+            </section>
+          </section>
+        </form>
+      </section>
+
+      <!-- Tests History -->
+      <header>
+        <h5> Test History </h5>
+      </header>
+
+      <!-- No Test(s) History -->
+      <section id="no-test-history-container" class="d-flex justify-content-center align-items-center">
+        No History
+      </section>
+
+      <!-- History -->
+      <header>
+        <h5> History </h5>
+      </header>
+
+      <section id="history">
+        <horizontal-timeline [timelineElements]="timeline" [showContent]="true"></horizontal-timeline>
+      </section>
+
+    </section>
+  </section>
+</section>

@@ -1,0 +1,13 @@
+#user-information-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.user-information-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}
+
+#no-test-history-container {
+  height: 150px;
+}
