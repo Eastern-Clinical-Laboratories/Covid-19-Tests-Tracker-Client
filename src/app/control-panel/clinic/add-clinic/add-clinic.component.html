@@ -1,0 +1,130 @@
+<section id="add-clinic-container">
+  <!-- Card Container -->
+  <section class="card">
+
+    <!-- Card Content -->
+    <section class="card-content">
+      <section class="px-3">
+        <!-- Registration Form -->
+        <form class="form form-horizontal">
+          <!-- Personal Information -->
+          <section class="form-body">
+            <h4 class="form-section"><i class="ft-user"></i> Information</h4>
+
+            <!-- Lab Site Name -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="labsite-name">Name: </label>
+              <section class="col-md-6">
+                <input type="text" id="labsite-name" class="form-control" name="labsite-name"/>
+              </section>
+            </section>
+
+            <!-- Email ID -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="email-id">E-mail: </label>
+              <section class="col-md-6">
+                <input type="text" id="email-id" class="form-control" name="email"/>
+              </section>
+            </section>
+
+            <!-- Land line Number -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="landline-number">Landline Number: </label>
+              <section class="col-md-6">
+                <input type="number" id="landline-number" class="form-control" name="landline-number"/>
+              </section>
+            </section>
+
+            <!-- Mobile Number -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="mobile-number">Mobile Number: </label>
+              <section class="col-md-6">
+                <input type="number" id="mobile-number" class="form-control" name="mobile-number"/>
+              </section>
+            </section>
+
+            <!-- Address Line 1 -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="address">Address: </label>
+              <section class="col-md-6">
+                <input type="text" id="address" class="form-control" name="address"/>
+              </section>
+            </section>
+
+            <!-- Town/ City -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="city">City: </label>
+              <section class="col-md-6">
+                <input type="text" id="city" class="form-control" name="city"/>
+              </section>
+            </section>
+
+            <!-- State -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="area">Area: </label>
+              <section class="col-md-6">
+                <input type="text" id="area" class="form-control" name="area"/>
+              </section>
+            </section>
+
+            <!-- Country -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="active-status">Status: </label>
+              <section class="col-md-6">
+                <select id="active-status" name="active-status" class="form-control">
+                  <option value="none" disabled>Status:</option>
+                  <option value="active" selected>Active</option>
+                  <option value="inactive">Inactive</option>
+                </select>
+              </section>
+            </section>
+
+            <!-- Remarks -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="comment">Comments: </label>
+              <section class="col-md-6">
+                <textarea id="comment" rows="5" class="form-control" name="comment"></textarea>
+              </section>
+            </section>
+
+            <!-- Upload Signature -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="comment">Upload Signature: </label>
+              <label class="col-md-6 custom-file">
+                <input type="file" ng2FileSelect [uploader]="uploader">
+                <span class="custom-file-control"></span>
+              </label>
+            </section>
+
+            <!-- Login Information -->
+            <h4 class="form-section"><i class="ft-info"></i> Login Information </h4>
+
+            <!-- Login ID -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="mobile-number">Login ID: </label>
+              <section class="col-md-6">
+                <input type="text" id="login-id" class="form-control" name="login-id"/>
+              </section>
+            </section>
+
+            <!-- Password -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="mobile-number">Password: </label>
+              <section class="col-md-6">
+                <input type="password" id="password" class="form-control" name="password"/>
+              </section>
+            </section>
+          </section>
+
+          <!-- Actions -->
+          <section class="form-actions center">
+            <button type="button" class="btn btn-raised btn-warning mr-1"><i class="ft-x"></i> Cancel</button>
+            <button type="button" class="btn btn-raised btn-primary">
+              <i class="fa fa-check-square-o"></i> Save
+            </button>
+          </section>
+        </form>
+      </section>
+    </section>
+  </section>
+</section>

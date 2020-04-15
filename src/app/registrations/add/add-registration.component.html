@@ -15,27 +15,15 @@
           <section class="form-body">
             <h4 class="form-section"><i class="ft-user"></i> Personal Information</h4>
 
-            <!-- MRN -->
+            <!-- Referral -->
             <section class="form-group row">
-              <label class="col-md-3 label-control" for="mrn">MRN: </label>
+              <label class="col-md-3 label-control" for="referal">Referral: </label>
               <section class="col-md-6">
-                <input type="text" id="mrn" class="form-control" name="mrn"/>
-              </section>
-            </section>
-
-            <!-- Reference ID -->
-            <section class="form-group row">
-              <label class="col-md-3 label-control" for="first-name">Reference ID: </label>
-              <section class="col-md-6">
-                <input type="text" id="reference-id" class="form-control" name="reference-id"/>
-              </section>
-            </section>
-
-            <!-- National ID -->
-            <section class="form-group row">
-              <label class="col-md-3 label-control" for="first-name">National ID: </label>
-              <section class="col-md-6">
-                <input type="text" id="national-id" class="form-control" name="national-id"/>
+                <select id="referal" name="referal" class="form-control">
+                  <option value="none" disabled>Referral:</option>
+                  <option value="direct" selected>Direct</option>
+                  <option value="referral_1">Referral 1</option>
+                </select>
               </section>
             </section>
 
@@ -55,25 +43,6 @@
               </section>
             </section>
 
-            <!-- Gender -->
-            <section class="form-group row">
-              <label class="col-md-3 label-control">Gender: </label>
-              <section class="col-md-6 input-group">
-                <section class="custom-control custom-radio d-inline-block">
-                  <input type="radio" id="male" name="customRadioInline2" class="custom-control-input" checked/>
-                  <label class="custom-control-label" for="male">Male</label>
-                </section>
-                <section class="custom-control custom-radio d-inline-block ml-1">
-                  <input type="radio" id="female" name="customRadioInline2" class="custom-control-input"/>
-                  <label class="custom-control-label" for="female">Female</label>
-                </section>
-                <section class="custom-control custom-radio d-inline-block ml-1">
-                  <input type="radio" id="others" name="customRadioInline2" class="custom-control-input"/>
-                  <label class="custom-control-label" for="others">Others</label>
-                </section>
-              </section>
-            </section>
-
             <!-- Date Of Birth -->
             <section class="form-group row">
               <label class="col-md-3 label-control" for="dob">Date Of Birth: </label>
@@ -82,11 +51,11 @@
               </section>
             </section>
 
-            <!-- Email ID -->
+            <!-- National ID -->
             <section class="form-group row">
-              <label class="col-md-3 label-control" for="email-id">E-mail: </label>
+              <label class="col-md-3 label-control" for="national-id">National ID: </label>
               <section class="col-md-6">
-                <input type="text" id="email-id" class="form-control" name="email"/>
+                <input type="text" id="national-id" class="form-control" name="national-id"/>
               </section>
             </section>
 
@@ -103,6 +72,14 @@
               <label class="col-md-3 label-control" for="mobile-number">Mobile Number: </label>
               <section class="col-md-6">
                 <input type="number" id="mobile-number" class="form-control" name="mobile-number"/>
+              </section>
+            </section>
+
+            <!-- Email ID -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="email-id">E-mail: </label>
+              <section class="col-md-6">
+                <input type="text" id="email-id" class="form-control" name="email"/>
               </section>
             </section>
 

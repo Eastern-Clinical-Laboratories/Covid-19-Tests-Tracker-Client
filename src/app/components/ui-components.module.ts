@@ -106,6 +106,9 @@ import { NgbdSortableHeader } from './bootstrap/tables/sortable.directive';
     TablesComponent,
     NgbdSortableHeader,
   ],
+  exports: [
+    NgbdSortableHeader,
+  ],
 })
 export class UIComponentsModule {
 }

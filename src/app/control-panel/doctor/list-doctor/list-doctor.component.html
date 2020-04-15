@@ -1,0 +1,26 @@
+<section id="list-organization-container">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col" sortable="name">Organization Name</th>
+      <th scope="col" sortable="area">City</th>
+      <th scope="col" sortable="population">Area</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let organization of organizations">
+      <th scope="row">{{ organization.id }}</th>
+      <td>
+        <ngb-highlight [result]="organization.name"></ngb-highlight>
+      </td>
+      <td>
+        <ngb-highlight [result]="organization.name"></ngb-highlight>
+      </td>
+      <td>
+        <ngb-highlight [result]="organization.name"></ngb-highlight>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</section>
