@@ -6,11 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./clinic.component.css'],
 })
 export class ClinicComponent implements OnInit {
-
   constructor() {
   }
 
   ngOnInit(): void {
   }
-
 }
