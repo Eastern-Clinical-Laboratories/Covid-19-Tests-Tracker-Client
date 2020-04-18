@@ -7,18 +7,15 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.scss'],
 })
-
 export class LoginPageComponent {
-
   @ViewChild('f') loginForm: NgForm;
 
-  constructor(private router: Router,
-              private route: ActivatedRoute) {
+  constructor(private router: Router, private route: ActivatedRoute) {
   }
 
   // On submit button click
   onSubmit() {
-    this.router.navigate(['registrations/list-registrations']);
+    this.router.navigate(['registrations/add-registration']);
   }
 
   // On Forgot password link click

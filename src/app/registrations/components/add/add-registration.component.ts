@@ -1,26 +1,41 @@
 import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
-import { AddRegistrationModel } from '../../models/add-registration.model';
+import { ToastrService } from 'ngx-toastr';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 
+import { RegistrationsService } from '../../services/registrations.service';
+import { AddRegistrationRequestModel } from '../../models/add-registration-request.model';
+
+@UntilDestroy()
 @Component({
   selector: 'app-add-registration',
   templateUrl: './add-registration.component.html',
 })
-export class AddRegistrationComponent implements OnInit {
-  public addRegistrationModel: AddRegistrationModel;
+export class AddRegistrationComponent {
+  public addRegistrationModel: AddRegistrationRequestModel;
 
-  constructor(private readonly _router: Router) {
+  constructor(
+    private readonly _registrationService: RegistrationsService,
+    private readonly _toasterService: ToastrService,
+  ) {
     this._initializeProperties();
   }
 
-  ngOnInit(): void {
-  }
-
   public async onSaveButtonClicked(ngForm: NgForm): Promise<void> {
-    console.log(ngForm.value);
-    await this._router.navigate(['/registrations/preview-registrations']);
+    this._registrationService
+      .registerPatient(ngForm.value)
+      .pipe(untilDestroyed(this))
+      .subscribe(
+        () => {
+          this._initializeProperties();
+          this._toasterService.success('Registration Saved Successfully', 'Success', { progressBar: true });
+        },
+        () =>
+          this._toasterService.error('An Error Occured, when processing the request. Please try again later', 'Error', {
+            progressBar: true,
+          }),
+      );
   }
 
   private _initializeProperties(): void {
