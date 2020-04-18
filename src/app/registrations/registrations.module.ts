@@ -16,7 +16,15 @@ import { RegistrationPreviewComponent } from './components/add/preview/registrat
 
 @NgModule({
   declarations: [AddRegistrationComponent, RegistrationPreviewComponent, RegistrationListComponent, DetailsComponent],
-  imports: [CommonModule, RegistrationsRoutingModule, NgxBarcode6Module, NgxPrintModule, NgbDropdownModule, FullPagesModule, FormsModule],
+  imports: [
+    CommonModule,
+    RegistrationsRoutingModule,
+    NgxBarcode6Module,
+    NgxPrintModule,
+    NgbDropdownModule,
+    FullPagesModule,
+    FormsModule,
+  ],
 })
 export class RegistrationsModule {
 }
