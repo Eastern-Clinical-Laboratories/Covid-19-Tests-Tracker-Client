@@ -11,16 +11,16 @@
     <section class="card-content">
       <section class="px-3">
         <!-- Registration Form -->
-        <form class="form form-horizontal" autocomplete="off">
+        <form class="form form-horizontal" autocomplete="off" #form="ngForm">
           <!-- Personal Information -->
           <section class="form-body">
             <h4 class="form-section"><i class="ft-user"></i> Personal Information</h4>
 
             <!-- Referral -->
             <section class="form-group row">
-              <label class="col-md-3 label-control" for="referral">Category: </label>
+              <label class="col-md-3 label-control" for="category">Category: </label>
               <section class="col-md-6">
-                <select id="category" name="category" class="form-control">
+                <select id="category" name="category" class="form-control" [ngModel]="addRegistrationModel.category">
                   <option value="none" disabled>Category:</option>
                 </select>
               </section>
@@ -30,7 +30,13 @@
             <section class="form-group row">
               <label class="col-md-3 label-control" for="first-name">First Name: </label>
               <section class="col-md-6">
-                <input type="text" id="first-name" class="form-control" name="firstName"/>
+                <input
+                    type="text"
+                    id="first-name"
+                    class="form-control"
+                    name="firstName"
+                    [ngModel]="addRegistrationModel.firstName"
+                />
               </section>
             </section>
 
@@ -38,7 +44,13 @@
             <section class="form-group row">
               <label class="col-md-3 label-control" for="last-name">Last Name: </label>
               <section class="col-md-6">
-                <input type="text" id="last-name" class="form-control" name="latName"/>
+                <input
+                    type="text"
+                    id="last-name"
+                    class="form-control"
+                    name="lastName"
+                    [ngModel]="addRegistrationModel.lastName"
+                />
               </section>
             </section>
 
@@ -46,7 +58,13 @@
             <section class="form-group row">
               <label class="col-md-3 label-control" for="dob">Date Of Birth: </label>
               <section class="col-md-6">
-                <input type="date" id="dob" class="form-control" name="dateOfBirth"/>
+                <input
+                    type="date"
+                    id="dob"
+                    class="form-control"
+                    name="dateOfBirth"
+                    [ngModel]="addRegistrationModel.dateOfBirth"
+                />
               </section>
             </section>
 
@@ -54,15 +72,27 @@
             <section class="form-group row">
               <label class="col-md-3 label-control" for="national-id">National ID: </label>
               <section class="col-md-6">
-                <input type="text" id="national-id" class="form-control" name="nationalId"/>
+                <input
+                    type="text"
+                    id="national-id"
+                    class="form-control"
+                    name="nationalId"
+                    [ngModel]="addRegistrationModel.nationalId"
+                />
               </section>
             </section>
 
-            <!-- Land line Number -->
+            <!-- Landline Number -->
             <section class="form-group row">
               <label class="col-md-3 label-control" for="landline-number">Landline Number: </label>
               <section class="col-md-6">
-                <input type="number" id="landline-number" class="form-control" name="landlineNumber"/>
+                <input
+                    type="number"
+                    id="landline-number"
+                    class="form-control"
+                    name="landlineNumber"
+                    [ngModel]="addRegistrationModel.landlineNumber"
+                />
               </section>
             </section>
 
@@ -70,7 +100,13 @@
             <section class="form-group row">
               <label class="col-md-3 label-control" for="mobile-number">Mobile Number: </label>
               <section class="col-md-6">
-                <input type="number" id="mobile-number" class="form-control" name="mobileNumber"/>
+                <input
+                    type="number"
+                    id="mobile-number"
+                    class="form-control"
+                    name="mobileNumber"
+                    [ngModel]="addRegistrationModel.mobileNumber"
+                />
               </section>
             </section>
 
@@ -78,7 +114,42 @@
             <section class="form-group row">
               <label class="col-md-3 label-control" for="email-id">E-mail: </label>
               <section class="col-md-6">
-                <input type="text" id="email-id" class="form-control" name="emailId"/>
+                <input
+                    type="text"
+                    id="email-id"
+                    class="form-control"
+                    name="emailId"
+                    [ngModel]="addRegistrationModel.emailId"
+                />
+              </section>
+            </section>
+
+            <!-- Emergency Contact -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="emergency-contact">Emergency Contact: </label>
+              <section class="col-md-6">
+                <!-- Relation -->
+                <select
+                    name="emergencyContact"
+                    class="form-control"
+                    [ngModel]="addRegistrationModel.emergencyContact.relation"
+                >
+                  <option value="none" disabled>Relation:</option>
+                  <option value="parent" disabled>Parent</option>
+                  <option value="spouse" disabled>Spouse</option>
+                  <option value="children" disabled>Children</option>
+                  <option value="siblings" disabled>Siblings</option>
+                  <option value="others" disabled>Others</option>
+                </select>
+
+                <!-- Contact Number -->
+                <input
+                    type="text"
+                    class="form-control mt-2"
+                    name="address"
+                    placeholder="Contact Number"
+                    [ngModel]="addRegistrationModel.emergencyContact.mobileNumber"
+                />
               </section>
             </section>
 
@@ -86,7 +157,13 @@
             <section class="form-group row">
               <label class="col-md-3 label-control" for="address">Address: </label>
               <section class="col-md-6">
-                <input type="text" id="address" class="form-control" name="address"/>
+                <input
+                    type="text"
+                    id="address"
+                    class="form-control"
+                    name="address"
+                    [ngModel]="addRegistrationModel.address"
+                />
               </section>
             </section>
 
@@ -102,7 +179,13 @@
             <section class="form-group row">
               <label class="col-md-3 label-control" for="state">State: </label>
               <section class="col-md-6">
-                <input type="text" id="state" class="form-control" name="state"/>
+                <input
+                    type="text"
+                    id="state"
+                    class="form-control"
+                    name="state"
+                    [ngModel]="addRegistrationModel.state"
+                />
               </section>
             </section>
 
@@ -110,7 +193,7 @@
             <section class="form-group row">
               <label class="col-md-3 label-control" for="area">Area: </label>
               <section class="col-md-6">
-                <input type="text" id="area" class="form-control" name="area"/>
+                <input type="text" id="area" class="form-control" name="area" [ngModel]="addRegistrationModel.area"/>
               </section>
             </section>
 
@@ -119,9 +202,9 @@
 
             <!-- Referral Doctor -->
             <section class="form-group row">
-              <label class="col-md-3 label-control" for="priority">Referral: </label>
+              <label class="col-md-3 label-control" for="referral">Referral: </label>
               <section class="col-md-6">
-                <select id="referral" name="referral" class="form-control">
+                <select id="referral" name="referral" class="form-control" [ngModel]="addRegistrationModel.referral">
                   <option value="none" disabled>Doctor:</option>
                 </select>
               </section>
@@ -129,9 +212,15 @@
 
             <!-- File Number -->
             <section class="form-group row">
-              <label class="col-md-3 label-control" for="area">File Number: </label>
+              <label class="col-md-3 label-control" for="file-number">File Number: </label>
               <section class="col-md-6">
-                <input type="text" id="file-number" class="form-control" name="fileNumber"/>
+                <input
+                    type="text"
+                    id="file-number"
+                    class="form-control"
+                    name="fileNumber"
+                    [ngModel]="addRegistrationModel.fileNumber"
+                />
               </section>
             </section>
 
@@ -139,8 +228,8 @@
             <section class="form-group row">
               <label class="col-md-3 label-control" for="test">Test: </label>
               <section class="col-md-6">
-                <select id="test" name="test" class="form-control">
-                  <option value="none" selected="" disabled="">Test:</option>
+                <select id="test" name="test" class="form-control" [ngModel]="addRegistrationModel.samples[0].test">
+                  <option value="none" selected="" disabled="">Test</option>
                   <option value="COVID_19_ANTIBODY_RAPID_SCREENING_TEST">COVID 19 ANTIBODY RAPID SCREENING TEST</option>
                   <option value="COVID_19_DETECTION_BY_PCR">COVID 19 DETECTION BY PCR</option>
                 </select>
@@ -151,7 +240,12 @@
             <section class="form-group row">
               <label class="col-md-3 label-control" for="priority">Test Priority: </label>
               <section class="col-md-6">
-                <select id="priority" name="priority" class="form-control">
+                <select
+                    id="priority"
+                    name="priority"
+                    class="form-control"
+                    [ngModel]="addRegistrationModel.samples[0].priority"
+                >
                   <option value="none" disabled>Test Priority:</option>
                   <option value="high">High</option>
                   <option value="medium" selected>Medium</option>
@@ -160,11 +254,45 @@
               </section>
             </section>
 
+            <!-- Date Time: Sample Collection -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="sample-collection">Sample Collection: </label>
+              <section class="col-md-6">
+                <input
+                    type="datetime-local"
+                    id="sample-collection"
+                    class="form-control"
+                    name="collectionDateTime"
+                    [ngModel]="addRegistrationModel.samples[0].collectionDateTime"
+                />
+              </section>
+            </section>
+
+            <!-- Date Time: Sample Assertion -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="process-collection">Process Collection: </label>
+              <section class="col-md-6">
+                <input
+                    type="date"
+                    id="process-collection"
+                    class="form-control"
+                    name="assertionDateTime"
+                    [ngModel]="addRegistrationModel.samples[0].assertionDateTime"
+                />
+              </section>
+            </section>
+
             <!-- Comment -->
             <section class="form-group row">
               <label class="col-md-3 label-control" for="remarks">Comment: </label>
               <section class="col-md-6">
-                <textarea id="remarks" rows="5" class="form-control" name="comment"></textarea>
+                <textarea
+                    id="remarks"
+                    rows="5"
+                    class="form-control"
+                    name="comment"
+                    [ngModel]="addRegistrationModel.samples[0].priority"
+                ></textarea>
               </section>
             </section>
           </section>
@@ -177,7 +305,14 @@
             <label class="col-md-3 label-control">History Of Foreign Travel: </label>
             <section class="col-md-6 input-group">
               <section class="custom-control custom-radio d-inline-block">
-                <input type="radio" id="yes" name="historyOfForeignTravel" class="custom-control-input" checked/>
+                <input
+                    type="radio"
+                    id="yes"
+                    name="historyOfForeignTravel"
+                    class="custom-control-input"
+                    checked
+                    [ngModel]="addRegistrationModel.miscellaneousInformation.hasHistoryOfForeignTravel"
+                />
                 <label class="custom-control-label" for="yes">Yes</label>
               </section>
               <section class="custom-control custom-radio d-inline-block ml-1">
@@ -189,9 +324,14 @@
 
           <!-- Country -->
           <section class="form-group row">
-            <label class="col-md-3 label-control" for="priority">Country: </label>
+            <label class="col-md-3 label-control" for="miscellaneous_country">Country: </label>
             <section class="col-md-6">
-              <select id="miscellaneous_country" name="travelledCountry" class="form-control">
+              <select
+                  id="miscellaneous_country"
+                  name="travelledCountry"
+                  class="form-control"
+                  [ngModel]="addRegistrationModel.miscellaneousInformation.travelledCountry"
+              >
                 <option value="none" selected>Country:</option>
                 <option value="Afganistan">Afghanistan</option>
                 <option value="Albania">Albania</option>
@@ -447,14 +587,25 @@
           <section class="form-group row">
             <label class="col-md-3 label-control" for="date-of-return">Date Of Return: </label>
             <section class="col-md-6">
-              <input type="date" id="date-of-return" class="form-control" name="dateOfReturn"/>
+              <input
+                  type="date"
+                  id="date-of-return"
+                  class="form-control"
+                  name="dateOfReturn"
+                  [ngModel]="addRegistrationModel.miscellaneousInformation.returnedDate"
+              />
             </section>
           </section>
 
           <!-- Actions -->
           <section class="form-actions center">
-            <button type="button" class="btn btn-raised btn-warning mr-1"><i class="ft-x"></i> Cancel</button>
-            <button type="button" class="btn btn-raised btn-primary" (click)="onSaveButtonClicked()">
+            <!-- Clear Button -->
+            <button type="button" class="btn btn-raised btn-warning mr-1" (click)="form.reset()">
+              <i class="ft-x"></i> Clear
+            </button>
+
+            <!-- Save Button -->
+            <button type="button" class="btn btn-raised btn-primary" (click)="onSaveButtonClicked(form)">
               <i class="fa fa-check-square-o"></i> Save
             </button>
           </section>

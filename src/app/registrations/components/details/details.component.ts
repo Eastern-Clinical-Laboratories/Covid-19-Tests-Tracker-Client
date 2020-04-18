@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TimelineElement } from '../../pages/full-pages/timeline/horizontal/component/timeline-element';
+import { TimelineElement } from '../../../pages/full-pages/timeline/horizontal/component/timeline-element';
 
 @Component({
   selector: 'app-details',
@@ -7,7 +7,6 @@ import { TimelineElement } from '../../pages/full-pages/timeline/horizontal/comp
   styleUrls: ['./details.component.css'],
 })
 export class DetailsComponent implements OnInit {
-
   public timeline: TimelineElement[] = [
     { date: new Date(2014, 1, 16), selected: true, title: 'Horizontal Timeline', content: 'Test Content' },
     { date: new Date(2014, 2, 28), title: 'Event title here', content: 'Test Content' },
@@ -27,5 +26,4 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

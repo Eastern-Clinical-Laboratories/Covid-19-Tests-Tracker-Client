@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AddRegistrationComponent } from './add/add-registration.component';
-import { RegistrationListComponent } from './list/registration-list.component';
-import { RegistrationPreviewComponent } from './add/preview/registration-preview.component';
-import { DetailsComponent } from './details/details.component';
+import { DetailsComponent } from './components/details/details.component';
+import { AddRegistrationComponent } from './components/add/add-registration.component';
+import { RegistrationListComponent } from './components/list/registration-list.component';
+import { RegistrationPreviewComponent } from './components/add/preview/registration-preview.component';
 
 const routes: Routes = [
   {
