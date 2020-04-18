@@ -34,7 +34,7 @@ export class AddRegistrationComponent {
         () =>
           this._toasterService.error('An Error Occured, when processing the request. Please try again later', 'Error', {
             progressBar: true,
-          }),
+          })
       );
   }
 
