@@ -38,7 +38,7 @@ export class AddRegistrationComponent {
             {
               progressBar: true,
             },
-          ),
+          )
       );
   }
 

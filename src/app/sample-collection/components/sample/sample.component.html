@@ -1,0 +1,164 @@
+<section id="sample-container">
+  <section class="card">
+    <section class="card-body">
+      <!-- Sample Assertion -->
+      <header>
+        <h5>Sample Assertion</h5>
+      </header>
+
+      <br/>
+
+      <!-- Rapid Screen Testing -->
+      <section *ngIf="isRapidTest" id="rapid-testing">
+        <form class="form form-horizontal">
+          <!-- Sample ID -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control">Sample ID:</label>
+            <section class="col-md-6 text-muted">{{ addSampleRequestModel.id }}</section>
+          </section>
+
+          <!-- Test -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control">Test: </label>
+            <section class="col-md-6 text-muted">{{ addSampleRequestModel.test }}</section>
+          </section>
+
+          <!-- Sample Collection Date -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control">Sample Collection Date: </label>
+            <section class="col-md-6 text-muted">{{ addSampleRequestModel.collectionDateTime }}</section>
+          </section>
+
+          <!-- Sample Assertion Date -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control" for="reporting-date">Sample Assertion Date: </label>
+            <section class="col-md-6">
+              <input
+                  type="datetime-local"
+                  id="reporting-date"
+                  class="form-control"
+                  name="reporting-date"
+                  [(ngModel)]="addSampleRequestModel.assertionDateTime"
+              />
+            </section>
+          </section>
+
+          <!-- Sample Type -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control" for="sample-type">Sample Type: </label>
+            <section class="col-md-6">
+              <select
+                  id="sample-type"
+                  name="sample-type"
+                  class="form-control"
+                  [(ngModel)]="addSampleRequestModel.sampleType"
+              >
+                <option value="none" selected disabled>Sample Type:</option>
+                <option value="serum">Serum</option>
+                <option value="wholeblood">Whole Blood</option>
+                <option value="plasma">Plasma</option>
+              </select>
+            </section>
+          </section>
+
+          <!-- Comments -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control" for="remarks-rapid">Comments: </label>
+            <section class="col-md-6">
+              <textarea
+                  id="remarks-rapid"
+                  rows="5"
+                  class="form-control"
+                  name="remarks-rapid"
+                  [(ngModel)]="addSampleRequestModel.comment"
+              ></textarea>
+            </section>
+          </section>
+
+          <!-- Actions -->
+          <section class="form-actions center">
+            <!-- Save Button -->
+            <button type="button" class="btn btn-raised btn-primary" (click)="onSaveButtonClicked()">
+              <i class="fa fa-check-square-o"></i> Save
+            </button>
+          </section>
+        </form>
+      </section>
+
+      <!-- PCR Testing -->
+      <section *ngIf="!isRapidTest" id="pcr-testing">
+        <form class="form form-horizontal">
+          <!-- Sample ID -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control">Sample ID:</label>
+            <section class="col-md-6 text-muted">{{ addSampleRequestModel.id }}</section>
+          </section>
+
+          <!-- Test -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control">Test: </label>
+            <section class="col-md-6 text-muted">{{ addSampleRequestModel.test }}</section>
+          </section>
+
+          <!-- Sample Collection Date -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control">Sample Collection Date: </label>
+            <section class="col-md-6 text-muted">{{ addSampleRequestModel.collectionDateTime }}</section>
+          </section>
+
+          <!-- Sample Assertion Date -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control" for="reporting-data-pcr">Sample Assertion Date: </label>
+            <section class="col-md-6">
+              <input
+                  type="datetime-local"
+                  id="reporting-data-pcr"
+                  class="form-control"
+                  name="reporting-data-pcr"
+                  [(ngModel)]="addSampleRequestModel.assertionDateTime"
+              />
+            </section>
+          </section>
+
+          <!-- Sample Type -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control" for="sample-type">Select Sample Type: </label>
+            <section class="col-md-6">
+              <select
+                  id="sample-type-pcr"
+                  name="sample-type"
+                  class="form-control"
+                  [(ngModel)]="addSampleRequestModel.sampleType"
+              >
+                <option value="none" selected="" disabled="">Select Sample Type:</option>
+                <option value="serum">Throat Swab</option>
+              </select>
+            </section>
+          </section>
+
+          <!-- Comments -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control" for="remarks-pcr">Comments: </label>
+            <section class="col-md-6">
+              <textarea
+                  id="remarks-pcr"
+                  rows="5"
+                  class="form-control"
+                  name="remarks-pcr"
+                  [(ngModel)]="addSampleRequestModel.comment"
+              ></textarea>
+            </section>
+          </section>
+
+          <!-- Actions -->
+          <section class="form-actions center">
+            <!-- Save Button -->
+            <button type="button" class="btn btn-raised btn-primary" (click)="onSaveButtonClicked()">
+              <i class="fa fa-check-square-o"></i> Save
+            </button>
+          </section>
+        </form>
+      </section>
+    </section>
+  </section>
+</section>

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { SampleComponent } from './sample/sample.component';
-import { WaitingListComponent } from './waiting-list/waiting-list.component';
+import { SampleComponent } from './components/sample/sample.component';
+import { WaitingListComponent } from './components/waiting-list/waiting-list.component';
 
 const routes: Routes = [
   {
