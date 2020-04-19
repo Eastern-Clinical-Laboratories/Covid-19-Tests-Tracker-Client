@@ -5,7 +5,7 @@ export interface AddRegistrationRequestModel {
   dateOfBirth: Date;
   nationalId: string;
   landlineNumber: number;
-  mobileNumber: number;
+  mobileNumber: number[];
   emailId: string;
   address: string;
   country: string;
@@ -15,7 +15,7 @@ export interface AddRegistrationRequestModel {
   fileNumber: string;
   samples: SampleModel[];
   miscellaneousInformation: MiscellaneousInformationModel;
-  emergencyContact: EmergencyContactModel;
+  emergencyContact: EmergencyContactModel[];
 }
 
 interface SampleModel {

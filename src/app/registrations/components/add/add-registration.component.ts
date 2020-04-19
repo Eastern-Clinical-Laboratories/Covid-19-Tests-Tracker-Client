@@ -24,7 +24,7 @@ export class AddRegistrationComponent {
 
   public async onSaveButtonClicked(ngForm: NgForm): Promise<void> {
     this._registrationService
-      .registerPatient(ngForm.value)
+      .registerPatient(this.addRegistrationModel)
       .pipe(untilDestroyed(this))
       .subscribe(
         () => {
@@ -32,9 +32,13 @@ export class AddRegistrationComponent {
           this._toasterService.success('Registration Saved Successfully', 'Success', { progressBar: true });
         },
         () =>
-          this._toasterService.error('An Error Occured, when processing the request. Please try again later', 'Error', {
-            progressBar: true,
-          })
+          this._toasterService.error(
+            'An Error Occurred, when processing the request. Please try again later',
+            'Error',
+            {
+              progressBar: true,
+            },
+          ),
       );
   }
 
@@ -68,14 +72,14 @@ export class AddRegistrationComponent {
       firstName: '',
       landlineNumber: null,
       lastName: '',
-      mobileNumber: null,
+      mobileNumber: [],
       nationalId: '',
       state: '',
       referral: '',
       fileNumber: '',
       samples: [defaultSample],
       miscellaneousInformation: defaultMiscellaneousInformation,
-      emergencyContact: defaultEmergencyContact,
+      emergencyContact: [defaultEmergencyContact],
     };
   }
 }
