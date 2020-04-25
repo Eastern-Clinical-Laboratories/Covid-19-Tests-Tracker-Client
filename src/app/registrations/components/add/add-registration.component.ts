@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 
 import { ToastrService } from 'ngx-toastr';
@@ -15,8 +16,9 @@ export class AddRegistrationComponent {
   public addRegistrationModel: AddRegistrationRequestModel;
 
   constructor(
+    private readonly _router: Router,
+    private readonly _toasterService: ToastrService,
     private readonly _registrationService: RegistrationsService,
-    private readonly _toasterService: ToastrService
   ) {
     this._initializeProperties();
   }
@@ -36,8 +38,9 @@ export class AddRegistrationComponent {
             'Error',
             {
               progressBar: true,
-            }
-          )
+            },
+          ),
+        async () => await this._router.navigate(['/registrations/list-registrations']),
       );
   }
 
