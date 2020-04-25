@@ -22,7 +22,7 @@ export class AddRegistrationComponent {
     this._initializeProperties();
   }
 
-  public async onSaveButtonClicked(ngForm: NgForm): Promise<void> {
+  public async onSaveButtonClicked(): Promise<void> {
     this._registrationService
       .registerPatient(this.addRegistrationModel)
       .pipe(untilDestroyed(this))
