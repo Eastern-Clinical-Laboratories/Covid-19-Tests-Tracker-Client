@@ -10,8 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class LoginPageComponent {
   @ViewChild('f') loginForm: NgForm;
 
-  constructor(private router: Router, private route: ActivatedRoute) {
-  }
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   // On submit button click
   onSubmit() {

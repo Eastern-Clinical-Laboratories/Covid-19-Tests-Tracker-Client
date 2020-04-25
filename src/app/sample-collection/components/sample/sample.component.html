@@ -6,7 +6,7 @@
         <h5>Sample Assertion</h5>
       </header>
 
-      <br/>
+      <br />
 
       <!-- Rapid Screen Testing -->
       <section *ngIf="isRapidTest" id="rapid-testing">
@@ -34,11 +34,11 @@
             <label class="col-md-3 label-control" for="reporting-date">Sample Assertion Date: </label>
             <section class="col-md-6">
               <input
-                  type="datetime-local"
-                  id="reporting-date"
-                  class="form-control"
-                  name="reporting-date"
-                  [(ngModel)]="addSampleRequestModel.assertionDateTime"
+                type="datetime-local"
+                id="reporting-date"
+                class="form-control"
+                name="reporting-date"
+                [(ngModel)]="addSampleRequestModel.assertionDateTime"
               />
             </section>
           </section>
@@ -48,10 +48,10 @@
             <label class="col-md-3 label-control" for="sample-type">Sample Type: </label>
             <section class="col-md-6">
               <select
-                  id="sample-type"
-                  name="sample-type"
-                  class="form-control"
-                  [(ngModel)]="addSampleRequestModel.sampleType"
+                id="sample-type"
+                name="sample-type"
+                class="form-control"
+                [(ngModel)]="addSampleRequestModel.sampleType"
               >
                 <option value="none" selected disabled>Sample Type:</option>
                 <option value="serum">Serum</option>
@@ -66,11 +66,11 @@
             <label class="col-md-3 label-control" for="remarks-rapid">Comments: </label>
             <section class="col-md-6">
               <textarea
-                  id="remarks-rapid"
-                  rows="5"
-                  class="form-control"
-                  name="remarks-rapid"
-                  [(ngModel)]="addSampleRequestModel.comment"
+                id="remarks-rapid"
+                rows="5"
+                class="form-control"
+                name="remarks-rapid"
+                [(ngModel)]="addSampleRequestModel.comment"
               ></textarea>
             </section>
           </section>
@@ -111,11 +111,11 @@
             <label class="col-md-3 label-control" for="reporting-data-pcr">Sample Assertion Date: </label>
             <section class="col-md-6">
               <input
-                  type="datetime-local"
-                  id="reporting-data-pcr"
-                  class="form-control"
-                  name="reporting-data-pcr"
-                  [(ngModel)]="addSampleRequestModel.assertionDateTime"
+                type="datetime-local"
+                id="reporting-data-pcr"
+                class="form-control"
+                name="reporting-data-pcr"
+                [(ngModel)]="addSampleRequestModel.assertionDateTime"
               />
             </section>
           </section>
@@ -125,10 +125,10 @@
             <label class="col-md-3 label-control" for="sample-type">Select Sample Type: </label>
             <section class="col-md-6">
               <select
-                  id="sample-type-pcr"
-                  name="sample-type"
-                  class="form-control"
-                  [(ngModel)]="addSampleRequestModel.sampleType"
+                id="sample-type-pcr"
+                name="sample-type"
+                class="form-control"
+                [(ngModel)]="addSampleRequestModel.sampleType"
               >
                 <option value="none" selected="" disabled="">Select Sample Type:</option>
                 <option value="serum">Throat Swab</option>
@@ -141,11 +141,11 @@
             <label class="col-md-3 label-control" for="remarks-pcr">Comments: </label>
             <section class="col-md-6">
               <textarea
-                  id="remarks-pcr"
-                  rows="5"
-                  class="form-control"
-                  name="remarks-pcr"
-                  [(ngModel)]="addSampleRequestModel.comment"
+                id="remarks-pcr"
+                rows="5"
+                class="form-control"
+                name="remarks-pcr"
+                [(ngModel)]="addSampleRequestModel.comment"
               ></textarea>
             </section>
           </section>

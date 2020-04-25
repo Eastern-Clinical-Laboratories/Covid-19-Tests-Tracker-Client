@@ -11,5 +11,4 @@ import { WaitingListComponent } from './components/waiting-list/waiting-list.com
   declarations: [WaitingListComponent, SampleComponent],
   imports: [CommonModule, SampleCollectionRoutingModule, FullPagesModule, FormsModule],
 })
-export class SampleCollectionModule {
-}
+export class SampleCollectionModule {}

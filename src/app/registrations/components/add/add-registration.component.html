@@ -33,11 +33,11 @@
               <label class="col-md-3 label-control" for="first-name">First Name: </label>
               <section class="col-md-6">
                 <input
-                    type="text"
-                    id="first-name"
-                    class="form-control"
-                    name="firstName"
-                    [(ngModel)]="addRegistrationModel.firstName"
+                  type="text"
+                  id="first-name"
+                  class="form-control"
+                  name="firstName"
+                  [(ngModel)]="addRegistrationModel.firstName"
                 />
               </section>
             </section>
@@ -47,11 +47,11 @@
               <label class="col-md-3 label-control" for="last-name">Last Name: </label>
               <section class="col-md-6">
                 <input
-                    type="text"
-                    id="last-name"
-                    class="form-control"
-                    name="lastName"
-                    [(ngModel)]="addRegistrationModel.lastName"
+                  type="text"
+                  id="last-name"
+                  class="form-control"
+                  name="lastName"
+                  [(ngModel)]="addRegistrationModel.lastName"
                 />
               </section>
             </section>
@@ -61,12 +61,12 @@
               <label class="col-md-3 label-control" for="dob">Date Of Birth: </label>
               <section class="col-md-6">
                 <input
-                    type="date"
-                    id="dob"
-                    class="form-control"
-                    name="dateOfBirth"
-                    [ngModel]="addRegistrationModel.dateOfBirth | date: 'yyyy-MM-dd'"
-                    (ngModelChange)="addRegistrationModel.dateOfBirth = $event"
+                  type="date"
+                  id="dob"
+                  class="form-control"
+                  name="dateOfBirth"
+                  [ngModel]="addRegistrationModel.dateOfBirth | date: 'yyyy-MM-dd'"
+                  (ngModelChange)="addRegistrationModel.dateOfBirth = $event"
                 />
               </section>
             </section>
@@ -76,11 +76,11 @@
               <label class="col-md-3 label-control" for="national-id">National ID: </label>
               <section class="col-md-6">
                 <input
-                    type="text"
-                    id="national-id"
-                    class="form-control"
-                    name="nationalId"
-                    [(ngModel)]="addRegistrationModel.nationalId"
+                  type="text"
+                  id="national-id"
+                  class="form-control"
+                  name="nationalId"
+                  [(ngModel)]="addRegistrationModel.nationalId"
                 />
               </section>
             </section>
@@ -90,11 +90,11 @@
               <label class="col-md-3 label-control" for="landline-number">Landline Number: </label>
               <section class="col-md-6">
                 <input
-                    type="number"
-                    id="landline-number"
-                    class="form-control"
-                    name="landlineNumber"
-                    [(ngModel)]="addRegistrationModel.landlineNumber"
+                  type="number"
+                  id="landline-number"
+                  class="form-control"
+                  name="landlineNumber"
+                  [(ngModel)]="addRegistrationModel.landlineNumber"
                 />
               </section>
             </section>
@@ -104,11 +104,11 @@
               <label class="col-md-3 label-control" for="mobile-number">Mobile Number: </label>
               <section class="col-md-6">
                 <input
-                    type="number"
-                    id="mobile-number"
-                    class="form-control"
-                    name="mobileNumber"
-                    [(ngModel)]="addRegistrationModel.mobileNumber[0]"
+                  type="number"
+                  id="mobile-number"
+                  class="form-control"
+                  name="mobileNumber"
+                  [(ngModel)]="addRegistrationModel.mobileNumber[0]"
                 />
               </section>
             </section>
@@ -118,11 +118,11 @@
               <label class="col-md-3 label-control" for="email-id">E-mail: </label>
               <section class="col-md-6">
                 <input
-                    type="text"
-                    id="email-id"
-                    class="form-control"
-                    name="emailId"
-                    [(ngModel)]="addRegistrationModel.emailId"
+                  type="text"
+                  id="email-id"
+                  class="form-control"
+                  name="emailId"
+                  [(ngModel)]="addRegistrationModel.emailId"
                 />
               </section>
             </section>
@@ -133,9 +133,9 @@
               <section class="col-md-6">
                 <!-- Relation -->
                 <select
-                    name="relation"
-                    class="form-control"
-                    [(ngModel)]="addRegistrationModel.emergencyContact[0].relation"
+                  name="relation"
+                  class="form-control"
+                  [(ngModel)]="addRegistrationModel.emergencyContact[0].relation"
                 >
                   <option value="none" disabled>Relation:</option>
                   <option value="parent">Parent</option>
@@ -147,20 +147,20 @@
 
                 <!-- Contact Name -->
                 <input
-                    type="text"
-                    class="form-control mt-2"
-                    name="contact-name"
-                    placeholder="Contact Name"
-                    [(ngModel)]="addRegistrationModel.emergencyContact[0].name"
+                  type="text"
+                  class="form-control mt-2"
+                  name="contact-name"
+                  placeholder="Contact Name"
+                  [(ngModel)]="addRegistrationModel.emergencyContact[0].name"
                 />
 
                 <!-- Contact Number -->
                 <input
-                    type="text"
-                    class="form-control mt-2"
-                    name="mobileNumber"
-                    placeholder="Contact Number"
-                    [(ngModel)]="addRegistrationModel.emergencyContact[0].mobileNumber"
+                  type="text"
+                  class="form-control mt-2"
+                  name="mobileNumber"
+                  placeholder="Contact Number"
+                  [(ngModel)]="addRegistrationModel.emergencyContact[0].mobileNumber"
                 />
               </section>
             </section>
@@ -170,11 +170,11 @@
               <label class="col-md-3 label-control" for="address">Address: </label>
               <section class="col-md-6">
                 <input
-                    type="text"
-                    id="address"
-                    class="form-control"
-                    name="address"
-                    [(ngModel)]="addRegistrationModel.address"
+                  type="text"
+                  id="address"
+                  class="form-control"
+                  name="address"
+                  [(ngModel)]="addRegistrationModel.address"
                 />
               </section>
             </section>
@@ -192,11 +192,11 @@
               <label class="col-md-3 label-control" for="state">State: </label>
               <section class="col-md-6">
                 <input
-                    type="text"
-                    id="state"
-                    class="form-control"
-                    name="state"
-                    [(ngModel)]="addRegistrationModel.state"
+                  type="text"
+                  id="state"
+                  class="form-control"
+                  name="state"
+                  [(ngModel)]="addRegistrationModel.state"
                 />
               </section>
             </section>
@@ -205,7 +205,7 @@
             <section class="form-group row">
               <label class="col-md-3 label-control" for="area">Area: </label>
               <section class="col-md-6">
-                <input type="text" id="area" class="form-control" name="area" [(ngModel)]="addRegistrationModel.area"/>
+                <input type="text" id="area" class="form-control" name="area" [(ngModel)]="addRegistrationModel.area" />
               </section>
             </section>
 
@@ -237,11 +237,11 @@
               <label class="col-md-3 label-control" for="file-number">File Number: </label>
               <section class="col-md-6">
                 <input
-                    type="text"
-                    id="file-number"
-                    class="form-control"
-                    name="fileNumber"
-                    [(ngModel)]="addRegistrationModel.fileNumber"
+                  type="text"
+                  id="file-number"
+                  class="form-control"
+                  name="fileNumber"
+                  [(ngModel)]="addRegistrationModel.fileNumber"
                 />
               </section>
             </section>
@@ -263,10 +263,10 @@
               <label class="col-md-3 label-control" for="priority">Test Priority: </label>
               <section class="col-md-6">
                 <select
-                    id="priority"
-                    name="priority"
-                    class="form-control"
-                    [(ngModel)]="addRegistrationModel.samples[0].priority"
+                  id="priority"
+                  name="priority"
+                  class="form-control"
+                  [(ngModel)]="addRegistrationModel.samples[0].priority"
                 >
                   <option value="none" disabled>Test Priority:</option>
                   <option value="high">High</option>
@@ -281,12 +281,12 @@
               <label class="col-md-3 label-control" for="sample-collection">Sample Collection: </label>
               <section class="col-md-6">
                 <input
-                    type="datetime-local"
-                    id="sample-collection"
-                    class="form-control"
-                    name="collectionDateTime"
-                    [ngModel]="addRegistrationModel.samples[0].collectionDateTime | date: 'yyyy-MM-ddTHH:mm'"
-                    (ngModelChange)="addRegistrationModel.samples[0].collectionDateTime = $event"
+                  type="datetime-local"
+                  id="sample-collection"
+                  class="form-control"
+                  name="collectionDateTime"
+                  [ngModel]="addRegistrationModel.samples[0].collectionDateTime | date: 'yyyy-MM-ddTHH:mm'"
+                  (ngModelChange)="addRegistrationModel.samples[0].collectionDateTime = $event"
                 />
               </section>
             </section>
@@ -296,12 +296,12 @@
               <label class="col-md-3 label-control" for="process-collection">Process Collection: </label>
               <section class="col-md-6">
                 <input
-                    type="datetime-local"
-                    id="process-collection"
-                    class="form-control"
-                    name="assertionDateTime"
-                    [ngModel]="addRegistrationModel.samples[0].assertionDateTime | date: 'yyyy-MM-ddTHH:mm'"
-                    (ngModelChange)="addRegistrationModel.samples[0].assertionDateTime = $event"
+                  type="datetime-local"
+                  id="process-collection"
+                  class="form-control"
+                  name="assertionDateTime"
+                  [ngModel]="addRegistrationModel.samples[0].assertionDateTime | date: 'yyyy-MM-ddTHH:mm'"
+                  (ngModelChange)="addRegistrationModel.samples[0].assertionDateTime = $event"
                 />
               </section>
             </section>
@@ -311,11 +311,11 @@
               <label class="col-md-3 label-control" for="remarks">Comment: </label>
               <section class="col-md-6">
                 <textarea
-                    id="remarks"
-                    rows="5"
-                    class="form-control"
-                    name="comment"
-                    [(ngModel)]="addRegistrationModel.samples[0].comment"
+                  id="remarks"
+                  rows="5"
+                  class="form-control"
+                  name="comment"
+                  [(ngModel)]="addRegistrationModel.samples[0].comment"
                 ></textarea>
               </section>
             </section>
@@ -330,17 +330,17 @@
             <section class="col-md-6 input-group">
               <section class="custom-control custom-radio d-inline-block">
                 <input
-                    type="radio"
-                    id="yes"
-                    name="historyOfForeignTravel"
-                    class="custom-control-input"
-                    checked
-                    [(ngModel)]="addRegistrationModel.miscellaneousInformation.hasHistoryOfForeignTravel"
+                  type="radio"
+                  id="yes"
+                  name="historyOfForeignTravel"
+                  class="custom-control-input"
+                  checked
+                  [(ngModel)]="addRegistrationModel.miscellaneousInformation.hasHistoryOfForeignTravel"
                 />
                 <label class="custom-control-label" for="yes">Yes</label>
               </section>
               <section class="custom-control custom-radio d-inline-block ml-1">
-                <input type="radio" id="no" name="historyOfForeignTravel" class="custom-control-input"/>
+                <input type="radio" id="no" name="historyOfForeignTravel" class="custom-control-input" />
                 <label class="custom-control-label" for="no">No</label>
               </section>
             </section>
@@ -351,10 +351,10 @@
             <label class="col-md-3 label-control" for="miscellaneous_country">Country: </label>
             <section class="col-md-6">
               <select
-                  id="miscellaneous_country"
-                  name="travelledCountry"
-                  class="form-control"
-                  [(ngModel)]="addRegistrationModel.miscellaneousInformation.travelledCountry"
+                id="miscellaneous_country"
+                name="travelledCountry"
+                class="form-control"
+                [(ngModel)]="addRegistrationModel.miscellaneousInformation.travelledCountry"
               >
                 <option value="none" selected>Country:</option>
                 <option value="Afganistan">Afghanistan</option>
@@ -612,11 +612,11 @@
             <label class="col-md-3 label-control" for="date-of-return">Date Of Return: </label>
             <section class="col-md-6">
               <input
-                  type="date"
-                  id="date-of-return"
-                  class="form-control"
-                  name="dateOfReturn"
-                  [(ngModel)]="addRegistrationModel.miscellaneousInformation.returnedDate"
+                type="date"
+                id="date-of-return"
+                class="form-control"
+                name="dateOfReturn"
+                [(ngModel)]="addRegistrationModel.miscellaneousInformation.returnedDate"
               />
             </section>
           </section>

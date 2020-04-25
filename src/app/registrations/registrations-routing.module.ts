@@ -34,5 +34,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class RegistrationsRoutingModule {
-}
+export class RegistrationsRoutingModule {}

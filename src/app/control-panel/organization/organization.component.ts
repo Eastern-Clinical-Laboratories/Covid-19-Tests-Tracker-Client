@@ -5,9 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './organization.component.html',
 })
 export class OrganizationComponent implements OnInit {
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 }

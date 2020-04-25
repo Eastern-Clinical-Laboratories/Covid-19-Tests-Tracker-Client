@@ -37,5 +37,4 @@ import { ListOrganizationComponent } from './organization/list-organization/list
     NgbTypeaheadModule,
   ],
 })
-export class ControlPanelModule {
-}
+export class ControlPanelModule {}

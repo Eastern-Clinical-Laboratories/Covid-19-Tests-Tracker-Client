@@ -26,5 +26,4 @@ import { RegistrationPreviewComponent } from './components/add/preview/registrat
     FormsModule,
   ],
 })
-export class RegistrationsModule {
-}
+export class RegistrationsModule {}

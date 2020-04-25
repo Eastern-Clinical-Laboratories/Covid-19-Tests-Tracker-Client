@@ -1,4 +1,3 @@
-import { NgForm } from '@angular/forms';
 import { Component } from '@angular/core';
 
 import { ToastrService } from 'ngx-toastr';
@@ -17,7 +16,7 @@ export class AddRegistrationComponent {
 
   constructor(
     private readonly _registrationService: RegistrationsService,
-    private readonly _toasterService: ToastrService,
+    private readonly _toasterService: ToastrService
   ) {
     this._initializeProperties();
   }
