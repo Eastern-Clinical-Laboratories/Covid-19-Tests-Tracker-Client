@@ -47,7 +47,7 @@ export class SampleComponent implements OnInit {
             {
               progressBar: true,
             },
-          ),
+          )
       );
   }
 

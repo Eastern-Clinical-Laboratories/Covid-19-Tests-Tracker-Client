@@ -22,6 +22,8 @@
               <section class="col-md-6">
                 <select id="category" name="category" class="form-control" [(ngModel)]="addRegistrationModel.category">
                   <option value="none" disabled>Category:</option>
+                  <option value="direct">Direct</option>
+                  <option value="referral">Referral</option>
                 </select>
               </section>
             </section>
@@ -63,7 +65,8 @@
                     id="dob"
                     class="form-control"
                     name="dateOfBirth"
-                    [(ngModel)]="addRegistrationModel.dateOfBirth"
+                    [ngModel]="addRegistrationModel.dateOfBirth | date: 'yyyy-MM-dd'"
+                    (ngModelChange)="addRegistrationModel.dateOfBirth = $event"
                 />
               </section>
             </section>
@@ -142,6 +145,15 @@
                   <option value="others">Others</option>
                 </select>
 
+                <!-- Contact Name -->
+                <input
+                    type="text"
+                    class="form-control mt-2"
+                    name="contact-name"
+                    placeholder="Contact Name"
+                    [(ngModel)]="addRegistrationModel.emergencyContact[0].name"
+                />
+
                 <!-- Contact Number -->
                 <input
                     type="text"
@@ -200,11 +212,21 @@
             <!-- Test Information -->
             <h4 class="form-section"><i class="ft-clipboard"></i> COVID-19 Tests</h4>
 
-            <!-- Referral Doctor -->
+            <!-- Referral Organization -->
             <section class="form-group row">
               <label class="col-md-3 label-control" for="referral">Referral: </label>
               <section class="col-md-6">
                 <select id="referral" name="referral" class="form-control" [(ngModel)]="addRegistrationModel.referral">
+                  <option value="none" disabled>Doctor:</option>
+                </select>
+              </section>
+            </section>
+
+            <!-- Referral Doctor -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="referral">Doctor: </label>
+              <section class="col-md-6">
+                <select id="doctor" name="referral" class="form-control" [(ngModel)]="addRegistrationModel.doctor">
                   <option value="none" disabled>Doctor:</option>
                 </select>
               </section>
@@ -263,7 +285,8 @@
                     id="sample-collection"
                     class="form-control"
                     name="collectionDateTime"
-                    [(ngModel)]="addRegistrationModel.samples[0].collectionDateTime"
+                    [ngModel]="addRegistrationModel.samples[0].collectionDateTime | date: 'yyyy-MM-ddTHH:mm'"
+                    (ngModelChange)="addRegistrationModel.samples[0].collectionDateTime = $event"
                 />
               </section>
             </section>
@@ -277,7 +300,8 @@
                     id="process-collection"
                     class="form-control"
                     name="assertionDateTime"
-                    [(ngModel)]="addRegistrationModel.samples[0].assertionDateTime"
+                    [ngModel]="addRegistrationModel.samples[0].assertionDateTime | date: 'yyyy-MM-ddTHH:mm'"
+                    (ngModelChange)="addRegistrationModel.samples[0].assertionDateTime = $event"
                 />
               </section>
             </section>

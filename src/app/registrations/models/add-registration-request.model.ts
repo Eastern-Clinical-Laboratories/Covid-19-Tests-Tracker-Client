@@ -12,6 +12,7 @@ export interface AddRegistrationRequestModel {
   state: string;
   area: string;
   referral: string;
+  doctor: string;
   fileNumber: string;
   samples: SampleModel[];
   miscellaneousInformation: MiscellaneousInformationModel;
@@ -34,5 +35,6 @@ interface MiscellaneousInformationModel {
 
 interface EmergencyContactModel {
   relation: string;
+  name: string;
   mobileNumber: number;
 }

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { OrganizationComponent } from './organization/organization.component';
-import { ClinicComponent } from './clinic/clinic.component';
+import { ClinicComponent } from './labsite/clinic.component';
 import { DoctorComponent } from './doctor/doctor.component';
+import { OrganizationComponent } from './organization/organization.component';
 
 const routes: Routes = [
   {
@@ -14,7 +14,7 @@ const routes: Routes = [
         component: OrganizationComponent,
       },
       {
-        path: 'clinic',
+        path: 'labsite',
         component: ClinicComponent,
       },
       {

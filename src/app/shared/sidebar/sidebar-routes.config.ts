@@ -65,7 +65,7 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: '/sample-collection/pending-list',
-    title: 'Assertion',
+    title: 'Accession',
     icon: 'ft-droplet',
     class: '',
     badge: '',
@@ -93,8 +93,8 @@ export const ROUTES: RouteInfo[] = [
     isExternalLink: false,
     submenu: [
       {
-        path: '/control-panel/clinic',
-        title: 'Clinic',
+        path: '/control-panel/labsite',
+        title: 'Lab Site',
         icon: '',
         class: '',
         badge: '',

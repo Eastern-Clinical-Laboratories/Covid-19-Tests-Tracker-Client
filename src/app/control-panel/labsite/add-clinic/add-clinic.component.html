@@ -1,7 +1,6 @@
 <section id="add-clinic-container">
   <!-- Card Container -->
   <section class="card">
-
     <!-- Card Content -->
     <section class="card-content">
       <section class="px-3">
@@ -79,6 +78,18 @@
               </section>
             </section>
 
+            <!-- Associated Doctor -->
+            <section class="form-group row">
+              <label class="col-md-3 label-control" for="associated-doctor">Associated Doctor: </label>
+              <section class="col-md-6">
+                <select id="associated-doctor" name="associated-doctor" class="form-control">
+                  <option value="none" disabled>Status:</option>
+                  <option value="active" selected>Doctor 1</option>
+                  <option value="inactive">Doctor 2</option>
+                </select>
+              </section>
+            </section>
+
             <!-- Remarks -->
             <section class="form-group row">
               <label class="col-md-3 label-control" for="comment">Comments: </label>
@@ -87,17 +98,8 @@
               </section>
             </section>
 
-            <!-- Upload Signature -->
-            <section class="form-group row">
-              <label class="col-md-3 label-control" for="comment">Upload Signature: </label>
-              <label class="col-md-6 custom-file">
-                <input type="file" ng2FileSelect [uploader]="uploader">
-                <span class="custom-file-control"></span>
-              </label>
-            </section>
-
             <!-- Login Information -->
-            <h4 class="form-section"><i class="ft-info"></i> Login Information </h4>
+            <h4 class="form-section"><i class="ft-info"></i> Login Information</h4>
 
             <!-- Login ID -->
             <section class="form-group row">
@@ -119,9 +121,7 @@
           <!-- Actions -->
           <section class="form-actions center">
             <button type="button" class="btn btn-raised btn-warning mr-1"><i class="ft-x"></i> Cancel</button>
-            <button type="button" class="btn btn-raised btn-primary">
-              <i class="fa fa-check-square-o"></i> Save
-            </button>
+            <button type="button" class="btn btn-raised btn-primary"><i class="fa fa-check-square-o"></i> Save</button>
           </section>
         </form>
       </section>

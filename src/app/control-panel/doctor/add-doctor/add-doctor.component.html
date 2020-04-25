@@ -42,7 +42,7 @@
               </section>
             </section>
 
-            <!-- Address Line 1 -->
+            <!-- Address -->
             <section class="form-group row">
               <label class="col-md-3 label-control" for="address">Address: </label>
               <section class="col-md-6">
@@ -85,6 +85,15 @@
                 <textarea id="comment" rows="5" class="form-control" name="comment"></textarea>
               </section>
             </section>
+          </section>
+
+          <!-- Upload Signature -->
+          <section class="form-group row">
+            <label class="col-md-3 label-control" for="comment">Upload Signature: </label>
+            <label class="col-md-6 custom-file">
+              <input type="file" ng2FileSelect [uploader]="uploader"/>
+              <span class="custom-file-control"></span>
+            </label>
           </section>
 
           <!-- Actions -->

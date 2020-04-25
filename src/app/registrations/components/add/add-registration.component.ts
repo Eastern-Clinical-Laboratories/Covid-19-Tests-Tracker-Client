@@ -37,7 +37,7 @@ export class AddRegistrationComponent {
             'Error',
             {
               progressBar: true,
-            },
+            }
           )
       );
   }
@@ -59,6 +59,7 @@ export class AddRegistrationComponent {
 
     const defaultEmergencyContact = {
       mobileNumber: null,
+      name: '',
       relation: '',
     };
 
@@ -76,6 +77,7 @@ export class AddRegistrationComponent {
       nationalId: '',
       state: '',
       referral: '',
+      doctor: '',
       fileNumber: '',
       samples: [defaultSample],
       miscellaneousInformation: defaultMiscellaneousInformation,
