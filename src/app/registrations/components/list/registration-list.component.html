@@ -4,18 +4,18 @@
     <!-- Header Text -->
     <h5 class="test-list-header">COVID-19 Test List</h5>
 
-    <!-- Filter -->
+    <!-- Search -->
     <section class="input-group">
-      <input type="text" class="form-control"/>
-      <section class="input-group-append" ngbDropdown>
-        <button class="btn btn-primary btn-raised" id="status-drop-down" ngbDropdownToggle>Status</button>
-        <section ngbDropdownMenu class="dropdown-menu-right">
-          <button class="dropdown-item">In Progress (Waiting for Sample Collection)</button>
-          <button class="dropdown-item">In Progress (Waiting for Test Result)</button>
-          <button class="dropdown-item">Declined</button>
-          <button class="dropdown-item">Completed</button>
-        </section>
-      </section>
+      <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="searchQuery"
+          (keydown.enter)="onSearchButtonClicked()"
+          placeholder="Search By Patient ID/ Contact Number/ Email ID"
+      />
+      <div class="input-group-append">
+        <button class="btn btn-raised btn-primary" type="button" (click)="onSearchButtonClicked()">Go!</button>
+      </div>
     </section>
   </header>
 

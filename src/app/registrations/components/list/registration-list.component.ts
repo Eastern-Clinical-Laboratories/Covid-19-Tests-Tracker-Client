@@ -11,6 +11,8 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./registration-list.component.css'],
 })
 export class RegistrationListComponent implements OnInit {
+  public searchQuery: string;
+
   public isGettingRegisteredPatients: boolean;
 
   public registeredPatients: GetRegisteredPatientsResponseModel[];
@@ -23,11 +25,23 @@ export class RegistrationListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._registrationsService.getRegisteredPatients({ keyword: '' }).subscribe(
+    this._getRegisteredPatients('');
+  }
+
+  public async onViewDetailsButtonClicked(): Promise<void> {
+    await this._router.navigate(['/registrations/details']);
+  }
+
+  public onSearchButtonClicked(): void {
+    this.registeredPatients = [];
+    this._getRegisteredPatients(this.searchQuery);
+  }
+
+  private _getRegisteredPatients(searchQuery: string): void {
+    this._registrationsService.getRegisteredPatients({ keyword: searchQuery }).subscribe(
       data => {
         this.registeredPatients = data;
         this.isGettingRegisteredPatients = true;
-        console.table(data);
       },
       () => {
         this.isGettingRegisteredPatients = false;
@@ -35,9 +49,5 @@ export class RegistrationListComponent implements OnInit {
       },
       () => (this.isGettingRegisteredPatients = false),
     );
-  }
-
-  public async onViewDetailsButtonClicked(): Promise<void> {
-    await this._router.navigate(['/registrations/details']);
   }
 }

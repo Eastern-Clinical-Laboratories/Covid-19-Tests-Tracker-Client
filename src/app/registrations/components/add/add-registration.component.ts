@@ -38,7 +38,7 @@ export class AddRegistrationComponent {
             'Error',
             {
               progressBar: true,
-            },
+            }
           ),
         async () => await this._router.navigate(['/registrations/list-registrations']),
       );
