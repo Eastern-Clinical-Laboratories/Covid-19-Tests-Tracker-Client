@@ -46,7 +46,7 @@ export class SampleComponent implements OnInit {
             'Error',
             {
               progressBar: true,
-            },
+            }
           )
       );
   }
